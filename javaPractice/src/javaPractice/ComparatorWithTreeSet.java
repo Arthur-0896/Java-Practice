@@ -15,8 +15,7 @@ class Student implements Comparable<Student> {
     String name;
     int age;
     int totalMarks;
-
-    
+ 
 
     @Override
     public String toString() {
@@ -82,6 +81,20 @@ public class ComparatorWithTreeSet {
         for(Student student : treeSetSortedByMarks) {
             System.out.println(student.name + " " + student.totalMarks);
         }
+		/*
+		 * OUTPUT: 
+		 * Sorting by name: 
+		 * Arthur 
+		 * Lina 
+		 * Mitul 
+		 * Zen
+		 * 
+		 * Sorting by Marks: 
+		 * Arthur 200 
+		 * Lina 230 
+		 * Zen 255 
+		 * Mitul 300
+		 */
     }
 }
 
