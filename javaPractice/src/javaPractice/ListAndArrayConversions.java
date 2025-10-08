@@ -32,9 +32,13 @@ public class ListAndArrayConversions {
 		 */
 		
 		// Arrays.asList() demonstration
-		String arr2[] = {"John", "Marsh", "Becky"};
+		String arr2[] = new String[5];
+		arr2[0] = "John";
+		arr2[1] = "Marsh";
+		arr2[2] = "Becky";	
 		
 		List<String> arrayList2 = Arrays.asList(arr2);
+		
 		
 		System.out.println("Before modification:");
 		System.out.println("ArrayList2: " + arrayList2);
@@ -52,7 +56,7 @@ public class ListAndArrayConversions {
 		System.out.println("After modification:");
 		System.out.println("ArrayList2: " + arrayList2);   
 		System.out.println("\nArray: ");
-		
+		// Unsupported operation: arrayList2.add("asd");
 		for(String str: arr2) {
 			System.out.print(str+ " ");
 		}

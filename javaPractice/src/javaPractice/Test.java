@@ -3,25 +3,9 @@ package javaPractice;
 
 public class Test {
 	public static void main(String[] args) {
-		A a = new C();
-		a.printMessage();
-	
+		Long l1 = -128L;
+		Long l2 = -128L;
+		
+		System.out.println(l1 == l2);
 	}
-}
-
-
-class A {
-	void printMessage() {
-		System.out.print("In A");
-	}
-}
-
-class B extends A {
-	void printMessage() {
-		System.out.println("in B");
-	}
-}
-
-class C extends B {
-	
 }
