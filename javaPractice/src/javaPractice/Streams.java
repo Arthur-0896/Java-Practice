@@ -9,7 +9,7 @@ public class Streams {
 
 		Integer[] arr = { 1, 2, 3 };
 
-		//Arrays.stream(arr)
+		// Arrays.stream(arr)
 		Stream<Integer> stream = Arrays.stream(arr);
 
 		long count = stream.count();
@@ -29,23 +29,28 @@ public class Streams {
 		count = Arrays.stream(arr).filter(i -> i > 2).count();
 
 		System.out.println("Number of items > 2: " + count);
-		
+
 		// Streaming HashMaps
 		HashMap<String, Integer> dogs = new HashMap<>();
-		
+
 		dogs.put("Blaze", 11);
 		dogs.put("Tyson", 14);
 		dogs.put("Wanda", 3);
-		
+
 		count = dogs.entrySet().stream().filter(t -> t.getValue() > 10).count(); // Count the dogs older than 10 years.
-		
+
 		System.out.println("Number of dogs older than 10 years: " + count);
-		
+
 		// Stream.of(any object type)
-		Stream<String> strStream =  Stream.of("Arthur", "Tanisha", "Tyrell", "Lina");
+		Stream<String> strStream = Stream.of("Arthur", "Tanisha", "Tyrell", "Lina");
 		count = strStream.count();
 		System.out.println("Number of names in stream: " + count);
-		
+
+		String[] stringArr = new String[] { "A", "B", "C", "D" };
+
+		Stream<String> stringStream = Arrays.stream(stringArr);
+		System.out.println("Total number of items in 2nd String stream: " + stringStream.count());
+
 	}
 
 }
