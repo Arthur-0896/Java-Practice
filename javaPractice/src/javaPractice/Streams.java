@@ -51,6 +51,7 @@ public class Streams {
 		Stream<String> stringStream = Arrays.stream(stringArr);
 		System.out.println("Total number of items in 2nd String stream: " + stringStream.count());
 
+		int arrs[] = new int[] {1,2,3,4};
 	}
 
 }
